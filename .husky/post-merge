@@ -1,1 +1,5 @@
-pnpm
+#!/bin/sh
+. "$(dirname "$0")/_/husky.sh"
+
+echo "Running post-merge hook..."
+pnpm install || echo "pnpm install failed"
