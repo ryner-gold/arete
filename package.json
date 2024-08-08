@@ -6,7 +6,8 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "next lint"
+    "lint": "next lint",
+    "semantic-release": "semantic-release"
   },
   "dependencies": {
     "@emotion/react": "^11.13.0",
@@ -19,6 +20,11 @@
     "sqlite3": "^5.1.7"
   },
   "devDependencies": {
+    "@semantic-release/changelog": "^6.0.3",
+    "@semantic-release/commit-analyzer": "^13.0.0",
+    "@semantic-release/github": "^10.1.3",
+    "@semantic-release/npm": "^12.0.1",
+    "@semantic-release/release-notes-generator": "^14.0.1",
     "@types/node": "^20.14.14",
     "@types/react": "^18.3.3",
     "@types/react-dom": "^18.3.0",
