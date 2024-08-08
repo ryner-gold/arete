@@ -7,7 +7,11 @@
     "build": "next build",
     "start": "next start",
     "lint": "next lint",
-    "semantic-release": "semantic-release"
+    "semantic-release": "semantic-release",
+    "type-coverage": "type-coverage --detail --strict",
+    "pre-push": "pnpm run lint && pnpm exec tsc --noEmit && pnpm run type-coverage && pnpm run format:check",
+    "format:check": "prettier --check .",
+    "prepare": "husky"
   },
   "dependencies": {
     "@emotion/react": "^11.13.0",
@@ -32,8 +36,17 @@
     "eslint": "^8.57.0",
     "eslint-config-next": "14.2.5",
     "eslint-config-prettier": "^9.1.0",
+    "husky": "^9.1.4",
+    "lint-staged": "^15.2.8",
     "prettier": "^3.3.3",
     "semantic-release": "^24.0.0",
+    "type-coverage": "^2.29.1",
     "typescript": "^5"
+  },
+  "lint-staged": {
+    "*.{js,jsx,ts,tsx}": [
+      "eslint --fix",
+      "prettier --write"
+    ]
   }
 }
