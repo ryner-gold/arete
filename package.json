@@ -9,8 +9,10 @@
     "lint": "next lint",
     "semantic-release": "semantic-release",
     "type-coverage": "type-coverage --detail --strict",
-    "pre-push": "pnpm run lint && pnpm exec tsc --noEmit && pnpm run type-coverage && pnpm run format:check",
-    "format:check": "prettier --check .",
+    "type-check": "tsc --noEmit",
+    "pre-push": "pnpm run lint && pnpm run type-check && pnpm run type-coverage && pnpm run format:check",
+    "format": "prettier --write --ignore-path .prettierignore .",
+    "format:check": "prettier --check --ignore-path .prettierignore .",
     "prepare": "husky"
   },
   "dependencies": {
