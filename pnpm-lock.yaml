@@ -46,7 +46,7 @@ importers:
         specifier: ^3.1.11
         version: 3.1.11
       eslint:
-        specifier: ^8
+        specifier: ^8.57.0
         version: 8.57.0
       eslint-config-next:
         specifier: 14.2.5
