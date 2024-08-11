@@ -1,19 +1,23 @@
 import Header from '@/components/Header/Header';
+import MainContent from '@/components/MainContent/MainContent';
+import { FlexBoxColumn } from '@/components/CustomisedMUIComponents/FlexBoxColumn';
+import { FlexBox } from '@/components/CustomisedMUIComponents/FlexBox';
+import Toolbar from '@mui/material/Toolbar';
 import Box from '@mui/material/Box';
 
 export default function Home() {
   return (
-    <>
+    <FlexBoxColumn sx={{ minHeight: '100vh' }}>
       <Header />
-      <Box component="main" sx={{ p: 3 }}>
-        {/* Your main content goes here */}
-        <h1>Welcome to Arete</h1>
-        <p>To live to one&apos;is fullest potential</p>
-        {/* Add more content to make the page scrollable */}
-        {[...Array(50)].map((_, i) => (
-          <p key={i}>This is paragraph {i + 1}</p>
-        ))}
+      <Toolbar /> {/* This acts as a spacer */}
+      <Box sx={{ py: 4 }}>
+        <FlexBox
+          component="main"
+          sx={{ flexGrow: 1, justifyContent: 'center' }}
+        >
+          <MainContent />
+        </FlexBox>
       </Box>
-    </>
+    </FlexBoxColumn>
   );
 }
