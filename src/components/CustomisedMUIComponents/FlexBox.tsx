@@ -1,12 +1,8 @@
 'use client';
 
 import { styled } from '@mui/material/styles';
+import Box, { BoxProps } from '@mui/material/Box';
 
-export const FlexBox = styled('div')({
-  name: 'FlexBox',
+export const FlexBox = styled(Box)<BoxProps>(() => ({
   display: 'flex',
-});
-
-export const FlexBoxColumn = styled(FlexBox)({
-  flexDirection: 'column',
-});
+}));
