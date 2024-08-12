@@ -1,16 +1,45 @@
 'use client';
-import { Roboto } from 'next/font/google';
+
 import { createTheme } from '@mui/material/styles';
 
-const roboto = Roboto({
-  weight: ['300', '400', '500', '700'],
-  subsets: ['latin'],
-  display: 'swap',
-});
-
 const theme = createTheme({
+  palette: {
+    primary: {
+      main: '#3f51b5', // Indigo
+    },
+    secondary: {
+      main: '#f50057', // Pink
+    },
+    background: {
+      default: '#f5f5f5', // Light grey
+      paper: '#ffffff',
+    },
+  },
   typography: {
-    fontFamily: roboto.style.fontFamily,
+    fontFamily: '"Roboto", "Helvetica", "Arial", sans-serif',
+    h1: {
+      fontWeight: 300,
+    },
+    h2: {
+      fontWeight: 400,
+    },
+  },
+  components: {
+    MuiAppBar: {
+      styleOverrides: {
+        root: {
+          backgroundColor: '#ffffff',
+          color: '#3f51b5',
+        },
+      },
+    },
+    MuiButton: {
+      styleOverrides: {
+        root: {
+          borderRadius: 8,
+        },
+      },
+    },
   },
 });
 

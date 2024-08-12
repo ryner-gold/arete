@@ -1,8 +1,8 @@
 import React from 'react';
-import { ThemeProvider } from '@mui/material/styles';
 import { AppRouterCacheProvider } from '@mui/material-nextjs/v14-appRouter';
-import { CssBaseline } from '@mui/material';
+import CssBaseline from '@mui/material/CssBaseline';
 import { Metadata } from 'next';
+import { ThemeProvider } from '@mui/material/styles';
 import theme from '@/app/theme';
 
 export const metadata: Metadata = {
@@ -20,7 +20,8 @@ export default function RootLayout({
       <body>
         <AppRouterCacheProvider>
           <ThemeProvider theme={theme}>
-            <CssBaseline>{children}</CssBaseline>
+            <CssBaseline />
+            {children}
           </ThemeProvider>
         </AppRouterCacheProvider>
       </body>
