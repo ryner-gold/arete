@@ -48,7 +48,7 @@
     "eslint-config-next": "14.2.5",
     "eslint-config-prettier": "^9.1.0",
     "husky": "^9.1.4",
-    "lint-staged": "^15.2.8",
+    "lint-staged": "^15.2.10",
     "prettier": "^3.3.3",
     "semantic-release": "^24.0.0",
     "type-coverage": "^2.29.1",
