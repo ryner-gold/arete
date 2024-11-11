@@ -1,3 +1,8 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* TODO: Replace with tailwind CSS */
 * {
   box-sizing: border-box;
   padding: 0;
